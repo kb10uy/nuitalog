@@ -2,4 +2,5 @@
 *.rs.bk
 
 # Generated Protobuf file
-/src/protobuf
+/src/protobuf/*
+!/src/protobuf/mod.rs
