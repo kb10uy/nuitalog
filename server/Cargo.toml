@@ -10,4 +10,4 @@ edition = "2018"
 protobuf = "2.0"
 
 [build-dependencies]
-protoc-rust = "2.0"
+protobuf-codegen-pure = "2.0"

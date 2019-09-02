@@ -1,19 +1,18 @@
 use std::error::Error;
+use std::borrow::Borrow;
+use std::path::Path;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let protobuf_files = vec!["protobuf/ejaculation.proto"];
+    let root = Path::new("..//protobuf");
 
-    for file in protobuf_files.iter() {
-        let customize = protoc_rust::Customize {
+    protobuf_codegen_pure::run(protobuf_codegen_pure::Args {
+        out_dir: "src/protobuf",
+        includes: &[root.to_string_lossy().borrow()],
+        input: &["../protobuf/ejaculation.proto"],
+        customize: protobuf_codegen_pure::Customize {
             ..Default::default()
-        };
-        protoc_rust::run(protoc_rust::Args {
-            input: &[file],
-            out_dir: "src/protobuf",
-            includes: &[],
-            customize,
-        })?;
-    }
+        },
+    })?;
 
     Ok(())
 }
