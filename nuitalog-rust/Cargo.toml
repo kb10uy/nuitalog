@@ -1,5 +1,5 @@
 [package]
-name = "server"
+name = "nuitalog-rust"
 version = "0.1.0"
 authors = ["Yuu Kobayashi <kb10uy@kb10uy.org>"]
 edition = "2018"
@@ -10,4 +10,4 @@ edition = "2018"
 protobuf = "2.0"
 
 [build-dependencies]
-protobuf-codegen-pure = "2.0"
+protoc-rust = "2.0"
