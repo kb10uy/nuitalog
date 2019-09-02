@@ -8,7 +8,11 @@ fn main() -> Result<(), Box<dyn Error>> {
     protoc_rust::run(protoc_rust::Args {
         out_dir: "src/protobuf",
         includes: &[root.to_string_lossy().borrow()],
-        input: &["../protobuf/ejaculation.proto"],
+        input: &[
+            "../protobuf/basic.proto",
+            "../protobuf/ejaculation.proto",
+            "../protobuf/response.proto",
+        ],
         customize: protoc_rust::Customize {
             ..Default::default()
         },

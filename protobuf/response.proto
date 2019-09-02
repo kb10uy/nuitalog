@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "basic.proto";
+
+message Response {
+  Status status = 1;
+  string description = 2;
+  DateTime received_at = 3;
+}

@@ -1,13 +1,6 @@
 syntax = "proto3";
 
-message DateTime {
-  uint32 year = 1;
-  uint32 month = 2;
-  uint32 day = 3;
-  uint32 hour = 4;
-  uint32 minute = 5;
-  uint32 second = 6;
-}
+import "basic.proto";
 
 message EjaculationRequest {
   DateTime ejaculated_at = 1;
